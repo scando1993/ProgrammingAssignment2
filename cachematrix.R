@@ -15,7 +15,7 @@ makeCacheMatrix <- function(x = matrix()) {
     get <- function() x
     #Make the methods for setting and getting the inverse
     setinverse <- function(inverse) inv <<- inverse
-    getinverse <- function() inverse
+    getinverse <- function() inv
     #Make a list to access the attributes
     list(set = set, get = get,
          setinverse = setinverse,
@@ -48,5 +48,5 @@ cacheSolve <- function(x, ...) {
     ##Set the inverse to the original vector
     x$setinverse(inverse)
     ##Show the inverse
-    inv
+    inverse
 }
